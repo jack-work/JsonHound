@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using System.Text.RegularExpressions;
 
-if (args.SingleOrDefault() is "--help")
+if (args.FirstOrDefault() is "--help")
     return WriteAndExit(
         "Your json is escaped, perhaps at multiple levels (e.g. \"{\\\"test\\\": \\\"{...}\\\"}\"); and " +
         "you want to track it down and catch it and bring it back home to where it belongs (or " +
